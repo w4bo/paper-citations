@@ -1,0 +1,43 @@
+name: "Build"
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.0.0
+      - name: Download the citations
+        env:
+          SCHOLARID: ${{ secrets.SCHOLARID }}
+          SCOPUSID: ${{ secrets.SCOPUSID }}
+          SCOPUSKEY: ${{ secrets.SCOPUSKEY }}
+        run: |
+          cp config.example.yml config.yml
+          sed -i "s/<SCHOLARID>/$SCHOLARID/g" config.yml
+          sed -i "s/<SCOPUSID>/$SCOPUSID/g" config.yml
+          sed -i "s/<SCOPUSKEY>/$SCOPUSKEY/g" config.yml
+          pip install -r requirements.txt
+          python scholar-citations.py
+          python scopus-citations.py
+          jupyter nbconvert --execute --to notebook --inplace stats.ipynb
+      - name: Send Message
+        run: |
+          export CHANGELOG="$(cat data/summ.txt)"
+          echo "$CHANGELOG"
+          CHANGELOG="${CHANGELOG//'%'/'%25'}"
+          CHANGELOG="${CHANGELOG//$'\n'/'%0A'}"
+          CHANGELOG="${CHANGELOG//$'\r'/'%0D'}"
+          echo "::set-output name=FILE::$(echo "$CHANGELOG")"
+        id: fileaction
+      - name: Send telegram message
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            ${{ steps.fileaction.outputs.FILE }}
+            
