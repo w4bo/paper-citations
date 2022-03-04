@@ -26,7 +26,7 @@ def get_scopus_info(SCOPUS_ID):
     print(results)
     #return results
     fstring = '"{title}","{journal}",{date},{citations}' # ,{volume},{articlenum}
-    return fstring.format(authors=', '.join([au['ce:indexed-name'] for au in results['abstracts-retrieval-response']['authors']['author']]),
+    return fstring.format(#authors=', '.join([au['ce:indexed-name'] for au in results['abstracts-retrieval-response']['authors']['author']]),
                           title=results['abstracts-retrieval-response']['coredata']['dc:title'],
                           journal=results['abstracts-retrieval-response']['coredata']['prism:publicationName'],
                           # volume=results['abstracts-retrieval-response']['coredata']['prism:volume'],
