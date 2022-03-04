@@ -63,7 +63,7 @@ def get_scopus_ref(SCOPUS_ID):
     #                       # doi='doi:' + results['abstracts-retrieval-response']['coredata']['prism:doi'],
     #                       cites=int(results['abstracts-retrieval-response']['coredata']['citedby-count']))
 
-with open('scopus-citations.csv', 'w') as f:
+with open('data/scopus-citations.csv', 'w') as f:
     for p in papers:
         f.write(get_scopus_info("SCOPUS_ID:" + str(p["eid"].split("-")[-1])) + "\n")
         # print(get_scopus_info('SCOPUS_ID:85100942957'))

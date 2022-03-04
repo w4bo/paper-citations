@@ -15,7 +15,7 @@ print(author)
 # Print the titles of the author's publications
 # print([pub['bib']['title'] for pub in author['publications']])
 
-with open('scholar-citations.csv', 'w') as f:
+with open('data/scholar-citations.csv', 'w') as f:
     for p in author['publications']:
         pub = scholarly.fill(p)
         f.write('"' + pub['bib']['title'] + '"' + "," + str(pub['bib']['pub_year']) + "," + str(pub['num_citations']) + "\n")   
