@@ -4,6 +4,8 @@ on:
   push:
   pull_request:
   workflow_dispatch:
+  schedule:
+    - cron: '0 12 * * *' # ogni sabato alle 12 -> '0 12 * * SAT'
 
 jobs:
   build:
