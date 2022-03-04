@@ -23,6 +23,7 @@ def get_scopus_info(SCOPUS_ID):
            + "?field=authors,title,publicationName,volume,issueIdentifier,prism:pageRange,coverDate,article-number,doi,citedby-count,prism:aggregationType")
     resp = requests.get(url, headers={'Accept':'application/json', 'X-ELS-APIKey': config["SCOPUS-KEY"]})
     results = json.loads(resp.text)
+    print(results)
     #return results
     fstring = '"{title}","{journal}",{date},{citations}' # ,{volume},{articlenum}
     return fstring.format(authors=', '.join([au['ce:indexed-name'] for au in results['abstracts-retrieval-response']['authors']['author']]),
