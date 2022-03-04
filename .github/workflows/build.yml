@@ -25,7 +25,6 @@ jobs:
           sed -i "s/<SCHOLARID>/$SCHOLARID/g" config.yml
           sed -i "s/<SCOPUSID>/$SCOPUSID/g" config.yml
           sed -i "s/<SCOPUSKEY>/$SCOPUSKEY/g" config.yml
-          cat config.yml
           python --version
           pip install -r requirements.txt
           python scopus-citations.py
@@ -47,4 +46,3 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
             ${{ steps.fileaction.outputs.FILE }}
-            
