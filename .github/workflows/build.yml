@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.0.0
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.10.2'
       - name: Download the citations
         env:
           SCHOLARID: ${{ secrets.SCHOLARID }}
@@ -21,9 +24,10 @@ jobs:
           sed -i "s/<SCOPUSID>/$SCOPUSID/g" config.yml
           sed -i "s/<SCOPUSKEY>/$SCOPUSKEY/g" config.yml
           cat config.yml
+          python --version
           pip install -r requirements.txt
-          python scholar-citations.py
           python scopus-citations.py
+          python scholar-citations.py
           jupyter nbconvert --execute --to notebook --inplace stats.ipynb
       - name: Send Message
         run: |
