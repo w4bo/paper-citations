@@ -20,6 +20,7 @@ jobs:
           sed -i "s/<SCHOLARID>/$SCHOLARID/g" config.yml
           sed -i "s/<SCOPUSID>/$SCOPUSID/g" config.yml
           sed -i "s/<SCOPUSKEY>/$SCOPUSKEY/g" config.yml
+          cat config.yml
           pip install -r requirements.txt
           python scholar-citations.py
           python scopus-citations.py
