@@ -1,7 +1,5 @@
 config.yml
 .idea
-data/*.csv
-data/*.txt
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,linux,macos,java,scala,python,jupyternotebooks,venv
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,linux,macos,java,scala,python,jupyternotebooks,venv
