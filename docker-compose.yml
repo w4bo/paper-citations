@@ -6,4 +6,4 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./:/home
-    command: bash -c "cd /home && ./run.sh"
+    command: bash -c "cd /home && chmod +x run.sh && ./run.sh"
