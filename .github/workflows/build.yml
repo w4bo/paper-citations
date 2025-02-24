@@ -12,9 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.1.0
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.10.2'
       - name: Download the citations
         env:
           SCHOLARID: ${{ secrets.SCHOLARID }}
@@ -25,24 +22,20 @@ jobs:
           sed -i "s/<SCHOLARID>/$SCHOLARID/g" config.yml
           sed -i "s/<SCOPUSID>/$SCOPUSID/g" config.yml
           sed -i "s/<SCOPUSKEY>/$SCOPUSKEY/g" config.yml
-          python --version
-          pip install -r requirements.txt
-          python scopus-citations.py
-          python scholar-citations.py
-          jupyter nbconvert --execute --to notebook --inplace stats.ipynb
-      - name: Send Message
-        run: |
-          export CHANGELOG="$(cat data/summ.txt)"
-          echo "$CHANGELOG"
-          CHANGELOG="${CHANGELOG//'%'/'%25'}"
-          CHANGELOG="${CHANGELOG//$'\n'/'%0A'}"
-          CHANGELOG="${CHANGELOG//$'\r'/'%0D'}"
-          echo "::set-output name=FILE::$(echo "$CHANGELOG")"
-        id: fileaction
-      - name: Send telegram message
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: |
-            ${{ steps.fileaction.outputs.FILE }}
+          docker compose up
+      # - name: Send Message
+      #   run: |
+      #     export CHANGELOG="$(cat data/summ.txt)"
+      #     echo "$CHANGELOG"
+      #     CHANGELOG="${CHANGELOG//'%'/'%25'}"
+      #     CHANGELOG="${CHANGELOG//$'\n'/'%0A'}"
+      #     CHANGELOG="${CHANGELOG//$'\r'/'%0D'}"
+      #     echo "::set-output name=FILE::$(echo "$CHANGELOG")"
+      #   id: fileaction
+      # - name: Send telegram message
+      #   uses: appleboy/telegram-action@master
+      #   with:
+      #     to: ${{ secrets.TELEGRAM_TO }}
+      #     token: ${{ secrets.TELEGRAM_TOKEN }}
+      #     message: |
+      #       ${{ steps.fileaction.outputs.FILE }}
