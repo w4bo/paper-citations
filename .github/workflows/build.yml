@@ -5,11 +5,11 @@ on:
   pull_request:
   workflow_dispatch:
   schedule:
-    - cron: '0 12 * * SAT' # ogni sabato alle 12 -> '0 12 * * SAT'
+    - cron: '0 12 * * SAT'
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu:24.04
     steps:
       - uses: actions/checkout@v3.1.0
       - name: Download the citations
@@ -18,6 +18,9 @@ jobs:
           SCOPUSID: ${{ secrets.SCOPUSID }}
           SCOPUSKEY: ${{ secrets.SCOPUSKEY }}
         run: |
+          sed -i "s/<SCOPUSKEY>/$SCOPUSKEY/g" pybliometrics.cfg
+          mkdir -p ~/.config/
+          cp pybliometrics.cfg ~/.config/
           cp config.example.yml config.yml
           sed -i "s/<SCHOLARID>/$SCHOLARID/g" config.yml
           sed -i "s/<SCOPUSID>/$SCOPUSID/g" config.yml
