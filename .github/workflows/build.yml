@@ -23,6 +23,14 @@ jobs:
           sudo cp pybliometrics.cfg /root/.config/pybliometrics.cfg
           sudo chmod -R 777 /root
           cat /root/.config/pybliometrics.cfg
+
+          mkdir -p ~/.config
+          cp pybliometrics.cfg ~/.config/pybliometrics.cfg
+          cd ~
+          sed -i "s|root|$(pwd)|g" pybliometrics.cfg
+          cat ~/.config/pybliometrics.cfg
+          cd -
+
           cp config.example.yml config.yml
           sed -i "s/<SCHOLARID>/$SCHOLARID/g" config.yml
           sed -i "s/<SCOPUSID>/$SCOPUSID/g" config.yml
