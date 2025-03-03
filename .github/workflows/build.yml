@@ -27,7 +27,7 @@ jobs:
           mkdir -p ~/.config
           cp pybliometrics.cfg ~/.config/pybliometrics.cfg
           cd ~
-          sed -i "s|root|$(pwd)|g" pybliometrics.cfg
+          sed -i "s|root|$(pwd)|g" .config/pybliometrics.cfg
           cat ~/.config/pybliometrics.cfg
           cd -
 
