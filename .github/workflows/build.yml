@@ -19,8 +19,9 @@ jobs:
           SCOPUSKEY: ${{ secrets.SCOPUSKEY }}
         run: |
           sed -i "s/<SCOPUSKEY>/$SCOPUSKEY/g" pybliometrics.cfg
-          mkdir -p ~/.config/
-          cp pybliometrics.cfg ~/.config/
+          mkdir -p /root/.config/
+          cp pybliometrics.cfg /root/.config/
+          cat /root/.config/pybliometrics.cfg
           cp config.example.yml config.yml
           sed -i "s/<SCHOLARID>/$SCHOLARID/g" config.yml
           sed -i "s/<SCOPUSID>/$SCOPUSID/g" config.yml
