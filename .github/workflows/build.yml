@@ -21,6 +21,7 @@ jobs:
           sed -i "s/<SCOPUSKEY>/$SCOPUSKEY/g" pybliometrics.cfg
           sudo mkdir -p /root/.config
           sudo cp pybliometrics.cfg /root/.config/pybliometrics.cfg
+          sudo chmod 755 /root/.config/pybliometrics.cfg
           cat /root/.config/pybliometrics.cfg
           cp config.example.yml config.yml
           sed -i "s/<SCHOLARID>/$SCHOLARID/g" config.yml
