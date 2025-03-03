@@ -52,3 +52,21 @@ jobs:
       #     token: ${{ secrets.TELEGRAM_TOKEN }}
       #     message: |
       #       ${{ steps.fileaction.outputs.FILE }}
+  release:
+    needs:
+      - build
+    if: github.event_name == 'push'
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+      - name: Install Node
+        uses: actions/setup-node@v4.2.0
+        with:
+          node-version-file: package.json
+      - name: Release
+        run: |
+          npm install
+          npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
