@@ -1,4 +1,4 @@
 SCHOLAR-ID: <SCHOLARID>
 SCOPUS-ID: <SCOPUSID>
 SCOPUS-KEY: <SCOPUSKEY>
-config_dir: /root/.config/pybliometrics.cfg
+config_dir: /root/.config
