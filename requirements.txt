@@ -1,2 +1,2 @@
-pybliometrics==4.1.0
+pybliometrics==4.2
 scholarly==1.7.11
