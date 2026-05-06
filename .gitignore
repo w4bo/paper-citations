@@ -1,5 +1,6 @@
 config.yml
 .idea
+refs.bib
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,linux,macos,java,scala,python,jupyternotebooks,venv
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,linux,macos,java,scala,python,jupyternotebooks,venv

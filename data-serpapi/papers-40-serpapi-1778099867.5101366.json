@@ -1,0 +1,353 @@
+{
+  "search_metadata": {
+    "id": "69fba50efd9b9015c8de5561",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/wUUJsucB44gh7ze9fVG3jA/69fba50efd9b9015c8de5561.json",
+    "created_at": "2026-05-06 20:31:10 UTC",
+    "processed_at": "2026-05-06 20:31:10 UTC",
+    "google_scholar_author_url": "https://scholar.google.com/citations?user=XKLsGcIAAAAJ&hl=en&cstart=40",
+    "raw_html_file": "https://serpapi.com/searches/wUUJsucB44gh7ze9fVG3jA/69fba50efd9b9015c8de5561.html",
+    "total_time_taken": 1.12
+  },
+  "search_parameters": {
+    "engine": "google_scholar_author",
+    "author_id": "XKLsGcIAAAAJ",
+    "hl": "en",
+    "start": 40
+  },
+  "author": {
+    "name": "Matteo Francia",
+    "affiliations": "Ph.D. in Computer Science and Engineering, University of Bologna",
+    "email": "Verified email at unibo.it",
+    "website": "https://www.unibo.it/sitoweb/m.francia/en",
+    "interests": [
+      {
+        "title": "Big data",
+        "link": "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:big_data",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en&mauthors=label%3Abig_data"
+      },
+      {
+        "title": "Trajectory data",
+        "link": "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:trajectory_data",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en&mauthors=label%3Atrajectory_data"
+      },
+      {
+        "title": "Precision Agriculture",
+        "link": "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:precision_agriculture",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en&mauthors=label%3Aprecision_agriculture"
+      }
+    ],
+    "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=XKLsGcIAAAAJ&citpid=3"
+  },
+  "articles": [
+    {
+      "title": "A Similarity Function for Multi-Level and Multi-Dimensional Itemsets",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:IjCSPb-OGe4C",
+      "citation_id": "XKLsGcIAAAAJ:IjCSPb-OGe4C",
+      "authors": "M Francia, M Golfarelli, S Rizzi",
+      "cited_by": {
+        "value": 2,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4074578072327715436",
+        "serpapi_link": "https://serpapi.com/search.json?cites=4074578072327715436&engine=google_scholar&hl=en",
+        "cites_id": "4074578072327715436"
+      },
+      "year": "2018"
+    },
+    {
+      "title": "Self-adaptive analytical querying over schemaless data streams",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:ns9cj8rnVeAC",
+      "citation_id": "XKLsGcIAAAAJ:ns9cj8rnVeAC",
+      "authors": "C Forresi, M Francia, E Gallinucci, M Golfarelli",
+      "publication": "Journal of Big Data 12 (1), 211, 2025",
+      "cited_by": {
+        "value": 1,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=254858055238527405",
+        "serpapi_link": "https://serpapi.com/search.json?cites=254858055238527405&engine=google_scholar&hl=en",
+        "cites_id": "254858055238527405"
+      },
+      "year": "2025"
+    },
+    {
+      "title": "Automating materiality assessment with a data-driven document-based approach",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:NMxIlDl6LWMC",
+      "citation_id": "XKLsGcIAAAAJ:NMxIlDl6LWMC",
+      "authors": "M Francia, E Gallinucci, M Golfarelli",
+      "publication": "International Journal of Information Management Data Insights 5 (1), 100310, 2025",
+      "cited_by": {
+        "value": 1,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12078456576298247743",
+        "serpapi_link": "https://serpapi.com/search.json?cites=12078456576298247743&engine=google_scholar&hl=en",
+        "cites_id": "12078456576298247743"
+      },
+      "year": "2025"
+    },
+    {
+      "title": "ASSO: the Automated Schemaless Stream Overseer",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:BqipwSGYUEgC",
+      "citation_id": "XKLsGcIAAAAJ:BqipwSGYUEgC",
+      "authors": "C Forresi, M Francia, E Gallinucci, M Golfarelli",
+      "publication": "Proceedings 28th International Conference on Extending Database Technology …, 2025",
+      "cited_by": {
+        "value": 1,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=851827496300680146",
+        "serpapi_link": "https://serpapi.com/search.json?cites=851827496300680146&engine=google_scholar&hl=en",
+        "cites_id": "851827496300680146"
+      },
+      "year": "2025"
+    },
+    {
+      "title": "Describing and assessing cubes through intentional analytics",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:9ZlFYXVOiuMC",
+      "citation_id": "XKLsGcIAAAAJ:9ZlFYXVOiuMC",
+      "authors": "M Francia, M Golfarelli, S Rizzi",
+      "publication": "Proceedings 26th International Conference on Extending Database Technology …, 2023",
+      "cited_by": {
+        "value": 1,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14433805522905963284",
+        "serpapi_link": "https://serpapi.com/search.json?cites=14433805522905963284&engine=google_scholar&hl=en",
+        "cites_id": "14433805522905963284"
+      },
+      "year": "2023"
+    },
+    {
+      "title": "Dynamic Stream Clustering for Real-Time Schema Profiling with Dsc+",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:e5wmG9Sq2KIC",
+      "citation_id": "XKLsGcIAAAAJ:e5wmG9Sq2KIC",
+      "authors": "C Forresi, M Francia, E Gallinucci, M Golfarelli",
+      "publication": "Available at SSRN 4701020, 0",
+      "cited_by": {
+        "value": 1,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10509485715415406366",
+        "serpapi_link": "https://serpapi.com/search.json?cites=10509485715415406366&engine=google_scholar&hl=en",
+        "cites_id": "10509485715415406366"
+      },
+      "year": ""
+    },
+    {
+      "title": "Prescriptive watering: Data-driven optimization of water consumption in kiwifruit orchards",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:NaGl4SEjCO4C",
+      "citation_id": "XKLsGcIAAAAJ:NaGl4SEjCO4C",
+      "authors": "A Baiardi, M Francia, M Golfarelli, AV Papadopoulos, M Pasini",
+      "publication": "Computers and Electronics in Agriculture 243, 111306, 2026",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2026"
+    },
+    {
+      "title": "Predicting multidimensional cubes through intentional analytics",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:RGFaLdJalmkC",
+      "citation_id": "XKLsGcIAAAAJ:RGFaLdJalmkC",
+      "authors": "M Francia, S Rizzi, M Golfarelli, P Marcel",
+      "publication": "Information Systems, 102628, 2025",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2025"
+    },
+    {
+      "title": "Design of Cloud Data Platforms",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:lSLTfruPkqcC",
+      "citation_id": "XKLsGcIAAAAJ:lSLTfruPkqcC",
+      "authors": "A Baiardi, M Francia, E Gallinucci, M Golfarelli, M Pasini",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2025"
+    },
+    {
+      "title": "Method and system for soil-moisture monitoring",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:hMod-77fHWUC",
+      "citation_id": "XKLsGcIAAAAJ:hMod-77fHWUC",
+      "authors": "M FRANCIA, E GALLINUCCI, J GIOVANELLI, M GOLFARELLI, E Baldi, ...",
+      "publication": "US Patent App. 18/689,384, 2024",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2024"
+    },
+    {
+      "title": "Precision soil moisture monitoring: use of a multi-sensor profiling for optimizing yield and fruit quality of yellow fleshed kiwifruit in northern Italy",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:j3f4tGmQtD8C",
+      "citation_id": "XKLsGcIAAAAJ:j3f4tGmQtD8C",
+      "authors": "E Baldi, M Quartieri, M Golfarelli, M Francia, J Giovanelli, M Mastroleo, ...",
+      "publication": "European Geosciences Union General Assembly 2024 (EGU24), 16358, 2024",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2024"
+    },
+    {
+      "title": "Colossal Trajectory Mining Semantic Co-movement Pattern Mining",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:isC4tDSrTZIC",
+      "citation_id": "XKLsGcIAAAAJ:isC4tDSrTZIC",
+      "authors": "C Forresi, M Francia, E Gallinucci, M Golfarelli, M Pasini",
+      "publication": "CEUR WORKSHOP PROCEEDINGS 3741, 131-141, 2024",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2024"
+    },
+    {
+      "title": "Data Platform Design, Management, and Optimization (DATAPLAT)",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:HDshCWvjkbEC",
+      "citation_id": "XKLsGcIAAAAJ:HDshCWvjkbEC",
+      "authors": "M Francia, E Gallinucci, P Marcel, V Peralta",
+      "publication": "CEUR WORKSHOP PROCEEDINGS 3379, 2-2, 2023",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2023"
+    },
+    {
+      "title": "Fine-grained Soil Moisture Monitoring with PLUTO",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:-f6ydRqryjwC",
+      "citation_id": "XKLsGcIAAAAJ:-f6ydRqryjwC",
+      "authors": "M Francia, J Giovanelli, M Golfarelli",
+      "publication": "CEUR WORKSHOP PROCEEDINGS 3478, 545-554, 2023",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2023"
+    },
+    {
+      "title": "Using Regression to Explain Cube Measures",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:qUcmZB5y_30C",
+      "citation_id": "XKLsGcIAAAAJ:qUcmZB5y_30C",
+      "authors": "M Francia, S Rizzi, P Marcel",
+      "publication": "CEUR WORKSHOP PROCEEDINGS, 555-564, 2023",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2023"
+    },
+    {
+      "title": "Optimizing Execution Plans",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:J_g5lzvAfSwC",
+      "citation_id": "XKLsGcIAAAAJ:J_g5lzvAfSwC",
+      "authors": "C Forresit, M Francia, E Gallinucci",
+      "publication": "Advances in Databases and Information Systems: 25th European Conference …, 2021",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2021"
+    },
+    {
+      "title": "Augmenting the Knowledge Pyramid with Unconventional Data and Advanced Analytics",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:ULOm3_A8WrAC",
+      "citation_id": "XKLsGcIAAAAJ:ULOm3_A8WrAC",
+      "authors": "M Francia",
+      "publication": "alma, 2021",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2021"
+    },
+    {
+      "title": "WeLASER. IoT in Crop Management. Survey",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:5nxA0vEk-isC",
+      "citation_id": "XKLsGcIAAAAJ:5nxA0vEk-isC",
+      "authors": "G Vitali, M Francia, M Golfarelli, M Canavari",
+      "publication": "University of Bologna, 2021",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2021"
+    },
+    {
+      "title": "Metodo e Sistema per il Monitoraggio dell'Umidità del Suolo",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:_Qo2XoVZTnwC",
+      "citation_id": "XKLsGcIAAAAJ:_Qo2XoVZTnwC",
+      "authors": "M Francia, M Golfarelli, J Giovanelli, E Gallinucci, E Baldi, M Quartieri, ...",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2021"
+    },
+    {
+      "title": "Conversational OLAP",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XKLsGcIAAAAJ&cstart=40&citation_for_view=XKLsGcIAAAAJ:YOwf2qJgpHMC",
+      "citation_id": "XKLsGcIAAAAJ:YOwf2qJgpHMC",
+      "authors": "M Francia, E Gallinucci, M Golfarelli",
+      "publication": "CEUR WORKSHOP PROCEEDINGS 2994, 403-410, 2021",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2021"
+    }
+  ],
+  "cited_by": {
+    "table": [
+      {
+        "citations": {
+          "all": 731,
+          "since_2021": 704
+        }
+      },
+      {
+        "h_index": {
+          "all": 14,
+          "since_2021": 13
+        }
+      },
+      {
+        "i10_index": {
+          "all": 21,
+          "since_2021": 20
+        }
+      }
+    ],
+    "graph": [
+      {
+        "year": 2017,
+        "citations": 2
+      },
+      {
+        "year": 2018,
+        "citations": 2
+      },
+      {
+        "year": 2019,
+        "citations": 6
+      },
+      {
+        "year": 2020,
+        "citations": 15
+      },
+      {
+        "year": 2021,
+        "citations": 77
+      },
+      {
+        "year": 2022,
+        "citations": 77
+      },
+      {
+        "year": 2023,
+        "citations": 127
+      },
+      {
+        "year": 2024,
+        "citations": 175
+      },
+      {
+        "year": 2025,
+        "citations": 181
+      },
+      {
+        "year": 2026,
+        "citations": 61
+      }
+    ]
+  },
+  "public_access": {
+    "link": "https://scholar.google.com/citations?view_op=list_mandates&hl=en&user=XKLsGcIAAAAJ",
+    "available": 8,
+    "not_available": 0
+  },
+  "serpapi_pagination": {
+    "next": "https://serpapi.com/search.json?author_id=XKLsGcIAAAAJ&engine=google_scholar_author&hl=en&start=60",
+    "current": "https://serpapi.com/search.json?author_id=XKLsGcIAAAAJ&engine=google_scholar_author&hl=en&start=40",
+    "previous": "https://serpapi.com/search.json?author_id=XKLsGcIAAAAJ&engine=google_scholar_author&hl=en&start=20"
+  }
+}
