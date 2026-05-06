@@ -1,4 +1,4 @@
-pybliometrics==3.4.0
+pybliometrics==4.4.1
 scholarly==1.7.11
 pyyaml
 pandas

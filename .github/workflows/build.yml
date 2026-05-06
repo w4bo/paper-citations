@@ -5,44 +5,68 @@ on:
   pull_request:
   workflow_dispatch:
   schedule:
-    - cron: '0 12 * * SAT' # ogni sabato alle 12 -> '0 12 * * SAT'
+    - cron: '0 12 * * SAT'
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v3.1.0
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.10.2'
+      - uses: actions/checkout@v6.0.2
       - name: Download the citations
         env:
           SCHOLARID: ${{ secrets.SCHOLARID }}
           SCOPUSID: ${{ secrets.SCOPUSID }}
           SCOPUSKEY: ${{ secrets.SCOPUSKEY }}
         run: |
+          sed -i "s/<SCOPUSKEY>/$SCOPUSKEY/g" pybliometrics.cfg
+          sudo mkdir -p /root/.config
+          sudo cp pybliometrics.cfg /root/.config/pybliometrics.cfg
+          sudo chmod -R 777 /root
+          cat /root/.config/pybliometrics.cfg
+
+          mkdir -p ~/.config
+          cp pybliometrics.cfg ~/.config/pybliometrics.cfg
+          cd ~
+          sed -i "s|/root|$(pwd)|g" .config/pybliometrics.cfg
+          cat .config/pybliometrics.cfg
+          cd -
+
           cp config.example.yml config.yml
           sed -i "s/<SCHOLARID>/$SCHOLARID/g" config.yml
           sed -i "s/<SCOPUSID>/$SCOPUSID/g" config.yml
           sed -i "s/<SCOPUSKEY>/$SCOPUSKEY/g" config.yml
-          python --version
-          pip install -r requirements.txt
-          python scopus-citations.py
-          python scholar-citations.py
-          jupyter nbconvert --execute --to notebook --inplace stats.ipynb
-      - name: Send Message
-        run: |
-          export CHANGELOG="$(cat data/summ.txt)"
-          echo "$CHANGELOG"
-          CHANGELOG="${CHANGELOG//'%'/'%25'}"
-          CHANGELOG="${CHANGELOG//$'\n'/'%0A'}"
-          CHANGELOG="${CHANGELOG//$'\r'/'%0D'}"
-          echo "::set-output name=FILE::$(echo "$CHANGELOG")"
-        id: fileaction
-      - name: Send telegram message
-        uses: appleboy/telegram-action@master
+          docker compose up
+      # - name: Send Message
+      #   run: |
+      #     export CHANGELOG="$(cat data/summ.txt)"
+      #     echo "$CHANGELOG"
+      #     CHANGELOG="${CHANGELOG//'%'/'%25'}"
+      #     CHANGELOG="${CHANGELOG//$'\n'/'%0A'}"
+      #     CHANGELOG="${CHANGELOG//$'\r'/'%0D'}"
+      #     echo "::set-output name=FILE::$(echo "$CHANGELOG")"
+      #   id: fileaction
+      # - name: Send telegram message
+      #   uses: appleboy/telegram-action@master
+      #   with:
+      #     to: ${{ secrets.TELEGRAM_TO }}
+      #     token: ${{ secrets.TELEGRAM_TOKEN }}
+      #     message: |
+      #       ${{ steps.fileaction.outputs.FILE }}
+  release:
+    needs:
+      - build
+    if: github.event_name == 'push'
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.2
+      - name: Install Node
+        uses: actions/setup-node@v6.4.0
         with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: |
-            ${{ steps.fileaction.outputs.FILE }}
+          node-version-file: package.json
+      - name: Release
+        run: |
+          npm install
+          npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
