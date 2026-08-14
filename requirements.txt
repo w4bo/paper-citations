@@ -2,4 +2,4 @@ pybliometrics==4.4.1
 scholarly==1.7.11
 pyyaml
 pandas
-serpapi==1.0.2
+serpapi==1.1.0
